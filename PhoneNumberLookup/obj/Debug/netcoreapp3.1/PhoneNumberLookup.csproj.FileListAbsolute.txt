@@ -1,0 +1,13 @@
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\bin\Debug\netcoreapp3.1\PhoneNumberLookup.exe
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\bin\Debug\netcoreapp3.1\PhoneNumberLookup.deps.json
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\bin\Debug\netcoreapp3.1\PhoneNumberLookup.runtimeconfig.json
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\bin\Debug\netcoreapp3.1\PhoneNumberLookup.runtimeconfig.dev.json
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\bin\Debug\netcoreapp3.1\PhoneNumberLookup.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\bin\Debug\netcoreapp3.1\PhoneNumberLookup.pdb
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.csproj.AssemblyReference.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.AssemblyInfoInputs.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.AssemblyInfo.cs
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.csproj.CoreCompileInputs.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.pdb
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.genruntimeconfig.cache
