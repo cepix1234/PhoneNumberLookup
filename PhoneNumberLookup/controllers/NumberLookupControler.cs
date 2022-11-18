@@ -8,13 +8,13 @@ using System.Web;
 
 namespace PhoneNumberLookup.numberLookup
 {
-    public class NumberLookup
+    public class NumberLookupControler
     {
         public static string _ApiEndpoint;
         public static string _ApiKey;
         private HttpClient _httpClient;
 
-        public NumberLookup ()
+        public NumberLookupControler ()
         {
             _httpClient = new HttpClient();
         }

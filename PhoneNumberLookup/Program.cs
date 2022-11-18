@@ -6,7 +6,7 @@ namespace PhoneNumberLookup
 {
     class Program
     {
-        private static NumberLookup _NumberLookup;
+        private static NumberLookupControler _NumberLookup;
         static void Main(string[] args)
         {
             /**
@@ -16,7 +16,7 @@ namespace PhoneNumberLookup
              */
             Initialization.Initialization._Initialize();
 
-            _NumberLookup = new NumberLookup();
+            _NumberLookup = new NumberLookupControler();
             _NumberLookup.GetNumberInformation("+447488875509").Wait();
 
             Console.WriteLine("Hello World!");
