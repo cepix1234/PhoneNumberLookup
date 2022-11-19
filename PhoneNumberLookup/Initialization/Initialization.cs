@@ -5,7 +5,7 @@ namespace PhoneNumberLookup.Initialization
     { 
         public static void _Initialize()
         {
-            NumberLookupControler._ApiEndpoint = "https://ipqualityscore.com/api/json/phone";
+            NumberLookupControler._ApiEndpoint = "https://ipqualityscore.com/api/json";
             NumberLookupControler._ApiKey = "YrmOmwQ0njdMWNGNtXCunBsGKlL6sevB";
         }
 

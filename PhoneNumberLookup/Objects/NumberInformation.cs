@@ -7,83 +7,83 @@ namespace PhoneNumberLookup.Interfaces
     public class NumberInformation
 	{
 		[JsonPropertyName("message")]
-		public string Message { get; set; }
+		public string? Message { get; set; }
 
 		[JsonPropertyName("success")]
-		public Boolean Success { get; set; }
+		public Boolean? Success { get; set; }
 
 		[JsonPropertyName("formatted")]
-		public string Formatted { get; set; }
+		public string? Formatted { get; set; }
 
 		[JsonPropertyName("local_format")]
-		public string LocalFormat { get; set; }
+		public string? LocalFormat { get; set; }
 
 		[JsonPropertyName("valid")]
-		public Boolean Valid { get; set; }
+		public Boolean? Valid { get; set; }
 
 		[JsonPropertyName("fraud_score")]
-		public string FraudScore { get; set; }
+		public int? FraudScore { get; set; }
 
 		[JsonPropertyName("recent_abuse")]
-		public Boolean RecentAbuse { get; set; }
+		public Boolean? RecentAbuse { get; set; }
 
-		public Boolean VOIP { get; set; }
+		public Boolean? VOIP { get; set; }
 
 		[JsonPropertyName("prepaid")]
-		public Boolean Prepaid { get; set; }
+		public Boolean? Prepaid { get; set; }
 
 		[JsonPropertyName("risky")]
-		public Boolean Risky { get; set; }
+		public Boolean? Risky { get; set; }
 
 		[JsonPropertyName("active")]
-		public Boolean Active { get; set; }
+		public Boolean? Active { get; set; }
 
 		[JsonPropertyName("name")]
-		public string Name { get; set; }
+		public string? Name { get; set; }
 
 		[JsonPropertyName("carrier")]
-		public string Carrier { get; set; }
+		public string? Carrier { get; set; }
 
 		[JsonPropertyName("line_type")]
-		public string Line_type { get; set; }
+		public string? Line_type { get; set; }
 
 		[JsonPropertyName("country")]
-		public string Country { get; set; }
+		public string? Country { get; set; }
 
 		[JsonPropertyName("region")]
-		public string Region { get; set; }
+		public string? Region { get; set; }
 
 		[JsonPropertyName("city")]
-		public string City { get; set; }
+		public string? City { get; set; }
 
 		[JsonPropertyName("timezone")]
-		public string Timezone { get; set; }
+		public string? Timezone { get; set; }
 
 		[JsonPropertyName("zip_code")]
-		public string ZipCode { get; set; }
+		public string? ZipCode { get; set; }
 
 		[JsonPropertyName("dialing_code")]
-		public string DialingCode { get; set; }
+		public int? DialingCode { get; set; }
 
 		[JsonPropertyName("do_not_call")]
-		public Boolean DoNotCall { get; set; }
+		public Boolean? DoNotCall { get; set; }
 
 		[JsonPropertyName("leaked")]
-		public Boolean Leaked { get; set; }
+		public Boolean? Leaked { get; set; }
 
 		[JsonPropertyName("spammer")]
-		public Boolean Spammer { get; set; }
+		public Boolean? Spammer { get; set; }
 
 		[JsonPropertyName("active_status")]
-		public string ActiveStatus { get; set; }
+		public string? ActiveStatus { get; set; }
 
 		[JsonPropertyName("user_activity")]
-		public string UserActivity { get; set; }
+		public string? UserActivity { get; set; }
 
 		[JsonPropertyName("associated_email_addresses")]
-		public NumberAssociatedEmailAddresses AssociatedEmailAddresses { get; set; }
+		public NumberAssociatedEmailAddresses? AssociatedEmailAddresses { get; set; }
 
 		[JsonPropertyName("request_id")]
-		public string RequestId { get; set; }
+		public string? RequestId { get; set; }
 	}
 }
