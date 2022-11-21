@@ -1,10 +1,8 @@
 ﻿using System;
 using PhoneNumberLookup.numberLookup;
-using PhoneNumberLookup.Initialization;
 using PhoneNumberLookup.controllers;
-using PhoneNumberLookup.Interfaces;
-using System.Net.Http;
 using PhoneNumberLookup.ClassWrappers;
+using PhoneNumberLookup.Objects;
 
 namespace PhoneNumberLookup
 {
@@ -23,11 +21,11 @@ namespace PhoneNumberLookup
             _httpClient = new HttpClientCustom();
 
             _NumberLookup = new NumberLookupControler();
-            _NumberLookup.GetNumberInformation("+447488875509", _httpClient).Wait();
+            var task = _NumberLookup.GetNumberInformation("+447488875509", _httpClient);
+            task.Wait();
+            NumberInformation info = task.Result;
             _NumberLookup.GetAccountCredits(_httpClient).Wait();
-            ConsoleLogger.Log(_NumberLookup._LookedUpNumberInformations[0]);
-            ConsoleLogger.Log(_NumberLookup._LookedUpNumberInformations);
-            Console.WriteLine("Hello World!");
+            ConsoleLogger.Log(info);
 
         }
 

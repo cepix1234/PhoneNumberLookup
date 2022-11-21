@@ -2,7 +2,7 @@
 using Moq;
 using PhoneNumberLookup.interfaces;
 using PhoneNumberLookup.numberLookup;
-using System.Threading.Tasks;
+using PhoneNumberLookup.Objects;
 
 namespace PhoneNumberLookupTests.controllers
 {
@@ -49,12 +49,15 @@ namespace PhoneNumberLookupTests.controllers
 }";
 
         [TestMethod]
-        public async Task Number_lookup_contoler_desirializes_json_correctly_test()
+        public void Number_lookup_contoler_desirializes_json_correctly_test()
         {
             NumberLookupControler _controller = new NumberLookupControler();
             var HttpClientStub = new Mock<IHttpClient>();
             HttpClientStub.Setup(client => client.GetAsync("some url")).ReturnsAsync(JsonExample);
-            await _controller.GetNumberInformation("someNumber", (IHttpClient)HttpClientStub);
+            var task =  _controller.GetNumberInformation("someNumber", (IHttpClient)HttpClientStub);
+            task.Wait();
+            NumberInformation result = task.Result;
+            Assert.IsTrue(result.Message == "Phone is valid.", "Resulting json is correctly saved into lookedup numbers");
         }
 }
 }

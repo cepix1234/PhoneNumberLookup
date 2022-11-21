@@ -1,7 +1,3 @@
-F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.csproj.AssemblyReference.cache
-F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.AssemblyInfoInputs.cache
-F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.AssemblyInfo.cs
-F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.csproj.CoreCompileInputs.cache
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\testhost.dll
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\PhoneNumberLookup.deps.json
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\PhoneNumberLookup.runtimeconfig.json
@@ -99,6 +95,10 @@ F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.EventLog.dll
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\PhoneNumberLookup.dll
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\PhoneNumberLookup.pdb
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.csproj.AssemblyReference.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.AssemblyInfoInputs.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.AssemblyInfo.cs
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.csproj.CoreCompileInputs.cache
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.csproj.CopyComplete
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.dll
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.pdb

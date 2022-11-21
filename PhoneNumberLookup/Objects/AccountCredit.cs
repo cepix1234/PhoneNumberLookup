@@ -1,8 +1,9 @@
-﻿using System.Text.Json.Serialization;
+﻿using PhoneNumberLookup.interfaces;
+using System.Text.Json.Serialization;
 
 namespace PhoneNumberLookup.Objects
 {
-    public class AccountCredit
+    public class AccountCredit : IObject
     {
         [JsonPropertyName("success")]
         public bool? Success { get; set; }
@@ -27,5 +28,10 @@ namespace PhoneNumberLookup.Objects
 
         [JsonPropertyName("request_id")]
         public string? RequestId { get; set; }
+
+        public override string ToString()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

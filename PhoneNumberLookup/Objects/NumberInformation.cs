@@ -1,10 +1,10 @@
-﻿using PhoneNumberLookup.Objects;
+﻿using PhoneNumberLookup.interfaces;
 using System;
 using System.Text.Json.Serialization;
 
-namespace PhoneNumberLookup.Interfaces
+namespace PhoneNumberLookup.Objects
 {
-    public class NumberInformation
+    public class NumberInformation: IObject
 	{
 		[JsonPropertyName("message")]
 		public string? Message { get; set; }
@@ -85,5 +85,25 @@ namespace PhoneNumberLookup.Interfaces
 
 		[JsonPropertyName("request_id")]
 		public string? RequestId { get; set; }
-	}
+
+        public override string ToString()
+        {
+			return String.Format(@"{0}
+PhoneNumber: {1};{2}
+Is valid: {3}
+Recent abuse: {4}
+VOIP: {5}
+Risky: {6}
+Active: {7}
+Leaked: {8}
+Spammer: {9}
+Name: {10}
+Carrier: {11}
+Line type: {12}
+Country: {13}
+User active: {14}
+Associated emails: {15}",
+				Message, Formatted, LocalFormat, Valid.ToString(), RecentAbuse.ToString(), VOIP.ToString(), Risky.ToString(), Active.ToString(), Leaked.ToString(), Spammer.ToString(), Name, Carrier, Line_type, Country, Region, City, UserActivity, AssociatedEmailAddresses.ToString());
+        }
+    }
 }
