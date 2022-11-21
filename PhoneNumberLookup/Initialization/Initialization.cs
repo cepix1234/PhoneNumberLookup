@@ -1,4 +1,4 @@
-﻿using PhoneNumberLookup.numberLookup;
+﻿using PhoneNumberLookup.controllers;
 namespace PhoneNumberLookup.Initialization
 {
     public class Initialization

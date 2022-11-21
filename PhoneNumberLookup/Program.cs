@@ -1,5 +1,4 @@
 ﻿using System;
-using PhoneNumberLookup.numberLookup;
 using PhoneNumberLookup.controllers;
 using PhoneNumberLookup.ClassWrappers;
 using PhoneNumberLookup.Objects;
@@ -9,7 +8,8 @@ namespace PhoneNumberLookup
     class Program
     {
         private static NumberLookupControler _NumberLookup;
-        private static HttpClientCustom _httpClient;
+        private static HttpClientCustom _HttpClient;
+        private static ConsoleController _ConsoleController;
         static void Main(string[] args)
         {
             /**
@@ -18,15 +18,12 @@ namespace PhoneNumberLookup
              * no parameters start interactive mode
              */
             Initialize();
-            _httpClient = new HttpClientCustom();
 
+            _HttpClient = new HttpClientCustom();
             _NumberLookup = new NumberLookupControler();
-            var task = _NumberLookup.GetNumberInformation("+447488875509", _httpClient);
-            task.Wait();
-            NumberInformation info = task.Result;
-            _NumberLookup.GetAccountCredits(_httpClient).Wait();
-            ConsoleLogger.Log(info);
+            _ConsoleController = new ConsoleController(_NumberLookup, _HttpClient);
 
+            _ConsoleController.StartConsole(args);
         }
 
         static private void Initialize()

@@ -31,7 +31,7 @@ namespace PhoneNumberLookup.Objects
 
         public override string ToString()
         {
-            throw new System.NotImplementedException();
+            return string.Format("{0}, available credits: {1}",Message, Credits);
         }
     }
 }

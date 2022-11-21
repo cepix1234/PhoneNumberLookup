@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using PhoneNumberLookup.interfaces;
-using PhoneNumberLookup.numberLookup;
 using PhoneNumberLookup.Objects;
 
 namespace PhoneNumberLookupTests.controllers
