@@ -16,6 +16,7 @@ namespace PhoneNumberLookup.controllers
         {
         }
 
+
         public async Task<NumberInformation> GetNumberInformation(String number, IHttpClient _httpClient)
         {
             string ApiRequequestURL = String.Format("{0}/phone?key={1}&phone={2}", _ApiEndpoint, _ApiKey, HttpUtility.UrlEncode(number));

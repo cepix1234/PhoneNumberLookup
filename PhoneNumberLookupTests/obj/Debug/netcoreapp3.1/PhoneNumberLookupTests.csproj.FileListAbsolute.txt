@@ -103,3 +103,9 @@ F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.dll
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.pdb
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\obj\Debug\netcoreapp3.1\PhoneNumberLookupTests.genruntimeconfig.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\nunit.engine.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\testcentric.engine.metadata.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookupTests\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb

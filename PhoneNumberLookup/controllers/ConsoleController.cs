@@ -1,4 +1,5 @@
 ﻿using PhoneNumberLookup.ClassWrappers;
+using PhoneNumberLookup.controllers.Helpers;
 using PhoneNumberLookup.Objects;
 using System;
 using System.Collections.Generic;
@@ -22,18 +23,19 @@ namespace PhoneNumberLookup.controllers
             if(args.Length == 0)
             {
                 DissplayHelp();
-                throw new Exception("No operation provided");
             }
 
             if (args[0] == "-i")
             {
                 //intteractive
+                InteractiveConsoleController InteractiveController = new InteractiveConsoleController(_Controller, _HttpClient);
+                InteractiveController.Start();
                 return;
             }
             else if (args[0] == "-n")
             {
                 //only this number
-                ConsoleLogger.Log(this.GetNumberInfo(args[1]));
+                ConsoleLogger.Log(ControllerHelper.GetNumberInfo(args[1], _Controller, _HttpClient));
                 return;
             }
             else if (args[0] == "-f")
@@ -42,7 +44,7 @@ namespace PhoneNumberLookup.controllers
                 IEnumerable<string> lines = File.ReadLines(args[1]);
                 foreach (string line in lines)
                 {
-                    ConsoleLogger.Log(this.GetNumberInfo(line));
+                    ConsoleLogger.Log(ControllerHelper.GetNumberInfo(line, _Controller, _HttpClient));
                     Console.WriteLine("--------------------------------");
                 }
                 return;
@@ -50,7 +52,7 @@ namespace PhoneNumberLookup.controllers
             else if (args[0] == "-a")
             {
                 //get account information
-                ConsoleLogger.Log(this.GetAccountCredits());
+                ConsoleLogger.Log(ControllerHelper.GetAccountCredits(_Controller, _HttpClient));
                 return;
             }
             else if (args[0] == "-h")
@@ -74,20 +76,6 @@ namespace PhoneNumberLookup.controllers
 -f {file location} scan all phone numbers in a proveded files, each number in a seperate line,
 -a get account information available credits,
 -h dissplay this help dialog.");
-        }
-
-        private NumberInformation GetNumberInfo(string number)
-        {
-            var task = _Controller.GetNumberInformation(number, _HttpClient);
-            task.Wait();
-            return task.Result;
-        }
-
-        private AccountCredit GetAccountCredits()
-        {
-            var task = _Controller.GetAccountCredits(_HttpClient);
-            task.Wait();
-            return task.Result;
         }
     }
 }

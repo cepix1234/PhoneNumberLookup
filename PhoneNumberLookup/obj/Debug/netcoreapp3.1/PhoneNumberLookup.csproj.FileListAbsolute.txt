@@ -10,3 +10,4 @@ F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\P
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.dll
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.pdb
 F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.genruntimeconfig.cache
+F:\Programming\Git\PhoneNumberLookup\PhoneNumberLookup\obj\Debug\netcoreapp3.1\PhoneNumberLookup.csproj.AssemblyReference.cache

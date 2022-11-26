@@ -1,7 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using PhoneNumberLookup.controllers;
 using PhoneNumberLookup.interfaces;
 using PhoneNumberLookup.Objects;
+using System.Text.Json;
 
 namespace PhoneNumberLookupTests.controllers
 {
@@ -58,5 +60,5 @@ namespace PhoneNumberLookupTests.controllers
             NumberInformation result = task.Result;
             Assert.IsTrue(result.Message == "Phone is valid.", "Resulting json is correctly saved into lookedup numbers");
         }
-}
+    }
 }
