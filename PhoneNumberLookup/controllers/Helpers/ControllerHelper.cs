@@ -12,7 +12,7 @@ namespace PhoneNumberLookup.controllers.Helpers
         {
             var task = controller.GetNumberInformation(number, client);
             task.Wait();
-            return task.Result;
+            return task.Result; //TODO dont do this make everything async, in Program start with _= Task.Run()
         }
 
         public static AccountCredit GetAccountCredits(NumberLookupControler controller, HttpClientCustom client)
