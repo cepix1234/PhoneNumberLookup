@@ -27,7 +27,7 @@ namespace PhoneNumberLookup.controllers
             {
                 //intteractive
                 InteractiveConsoleController InteractiveController = new InteractiveConsoleController(_Controller, _HttpClient);
-                InteractiveController.Start();
+                InteractiveController.Start().GetAwaiter().GetResult();
                 return;
             }
             else if (args[0] == "-n")

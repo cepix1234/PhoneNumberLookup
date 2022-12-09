@@ -18,7 +18,7 @@ namespace PhoneNumberLookup.controllers
             _Options = new string[] { "Scan phone number", "Get account information", "Quit"};
         }
 
-        public void Start()
+        public async Task Start()
         {
             int option = -1;
             while (option < _Options.Length - 1)
@@ -27,14 +27,7 @@ namespace PhoneNumberLookup.controllers
                 dissplayOptions();
                 option = Convert.ToInt32(Console.ReadLine().ToString());
                 Console.Clear();
-
-                _ = Task.Run(async () =>
-                {
-                    await PerformOption(option);
-                });
-
-                Console.WriteLine("Press button to continue");
-                Console.ReadKey();
+                await PerformOption(option);
             }
 
         }
