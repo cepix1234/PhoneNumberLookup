@@ -1,5 +1,7 @@
 ﻿using PhoneNumberLookup.ClassWrappers;
 using PhoneNumberLookup.controllers.Helpers;
+using PhoneNumberLookup.InteractiveOptions.Controller;
+using PhoneNumberLookup.InteractiveOptions.interfaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,10 +12,12 @@ namespace PhoneNumberLookup.controllers
     {
         private NumberLookupControler _Controller;
         private HttpClientCustom _HttpClient;
+        private IOption[] _InteractiveOptions;
         public ConsoleController(NumberLookupControler controller, HttpClientCustom client)
         {
             _Controller = controller;
             _HttpClient = client;
+            _InteractiveOptions = new IOption[] { new OptionLookupNumber(_Controller, _HttpClient), new OptionLookupAccount(_Controller, _HttpClient), new OptionQuit()};
         }
 
         public void StartConsole(string[] args)
@@ -26,7 +30,7 @@ namespace PhoneNumberLookup.controllers
             if (args[0] == "-i")
             {
                 //intteractive
-                InteractiveConsoleController InteractiveController = new InteractiveConsoleController(_Controller, _HttpClient);
+                InteractiveConsoleController InteractiveController = new InteractiveConsoleController(_InteractiveOptions);
                 InteractiveController.Start().GetAwaiter().GetResult();
                 return;
             }

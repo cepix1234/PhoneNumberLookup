@@ -2,7 +2,7 @@
   "profiles": {
     "PhoneNumberLookup": {
       "commandName": "Project",
-      "commandLineArgs": "-n + 447488875509"
+      "commandLineArgs": "-i"
     }
   }
 }
