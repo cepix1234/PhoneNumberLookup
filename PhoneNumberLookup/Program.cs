@@ -2,6 +2,7 @@
 using PhoneNumberLookup.controllers;
 using PhoneNumberLookup.ClassWrappers;
 using PhoneNumberLookup.Objects;
+using System.Threading.Tasks;
 
 namespace PhoneNumberLookup
 {
@@ -17,6 +18,8 @@ namespace PhoneNumberLookup
              * parameter file: read file line by line console dissplay for each line/ number
              * no parameters start interactive mode
              */
+
+            //-n + 447488875509
             Initialize();
 
             _HttpClient = new HttpClientCustom();

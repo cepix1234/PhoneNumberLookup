@@ -1,10 +1,8 @@
 ﻿using PhoneNumberLookup.ClassWrappers;
 using PhoneNumberLookup.controllers.Helpers;
-using PhoneNumberLookup.Objects;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace PhoneNumberLookup.controllers
 {
@@ -35,7 +33,7 @@ namespace PhoneNumberLookup.controllers
             else if (args[0] == "-n")
             {
                 //only this number
-                ConsoleLogger.Log(ControllerHelper.GetNumberInfo(args[1], _Controller, _HttpClient));
+                ConsoleLogger.Log(ControllerHelper.GetNumberInfo(args[1], _Controller, _HttpClient).GetAwaiter().GetResult());
                 return;
             }
             else if (args[0] == "-f")
@@ -44,7 +42,7 @@ namespace PhoneNumberLookup.controllers
                 IEnumerable<string> lines = File.ReadLines(args[1]);
                 foreach (string line in lines)
                 {
-                    ConsoleLogger.Log(ControllerHelper.GetNumberInfo(line, _Controller, _HttpClient));
+                    ConsoleLogger.Log(ControllerHelper .GetNumberInfo(line, _Controller, _HttpClient).GetAwaiter().GetResult());
                     Console.WriteLine("--------------------------------");
                 }
                 return;
@@ -52,7 +50,7 @@ namespace PhoneNumberLookup.controllers
             else if (args[0] == "-a")
             {
                 //get account information
-                ConsoleLogger.Log(ControllerHelper.GetAccountCredits(_Controller, _HttpClient));
+                ConsoleLogger.Log(ControllerHelper .GetAccountCredits(_Controller, _HttpClient).GetAwaiter().GetResult());
                 return;
             }
             else if (args[0] == "-h")

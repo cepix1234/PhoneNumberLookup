@@ -1,6 +1,7 @@
 ﻿using PhoneNumberLookup.ClassWrappers;
 using PhoneNumberLookup.controllers.Helpers;
 using System;
+using System.Threading.Tasks;
 
 namespace PhoneNumberLookup.controllers
 {
@@ -19,15 +20,23 @@ namespace PhoneNumberLookup.controllers
 
         public void Start()
         {
-            int option = 0;
-            do
+            int option = -1;
+            while (option < _Options.Length - 1)
             {
                 Console.WriteLine("---------------------------------------------");
                 dissplayOptions();
                 option = Convert.ToInt32(Console.ReadLine().ToString());
                 Console.Clear();
-                PerformOption(option);
-            } while (option < _Options.Length - 1);
+
+                _ = Task.Run(async () =>
+                {
+                    await PerformOption(option);
+                });
+
+                Console.WriteLine("Press button to continue");
+                Console.ReadKey();
+            }
+
         }
 
         private void dissplayOptions()
@@ -42,16 +51,16 @@ namespace PhoneNumberLookup.controllers
             Console.WriteLine("---------------------------------------------");
         }
 
-        private void PerformOption(int option)
+        private async Task PerformOption(int option)
         {
             switch (option) {
                 case 0:
-                    Console.WriteLine("Enter phone numebr to scan:");
+                    Console.WriteLine("Enter phone number to scan:");
                     string redPhoneNumber = Console.ReadLine().ToString();
-                    ConsoleLogger.Log(ControllerHelper.GetNumberInfo(redPhoneNumber, _Controller, _HttpClient));
+                    ConsoleLogger.Log(await ControllerHelper.GetNumberInfo(redPhoneNumber, _Controller, _HttpClient));
                     break;
                 case 1:
-                    ConsoleLogger.Log(ControllerHelper.GetAccountCredits(_Controller, _HttpClient));
+                    ConsoleLogger.Log(await ControllerHelper.GetAccountCredits(_Controller, _HttpClient));
                     break;
             }
         }
